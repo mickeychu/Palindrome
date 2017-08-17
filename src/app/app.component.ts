@@ -20,7 +20,7 @@ export class AppComponent {
 				this.text = null;
 
 				//remove unwanted letter and lowercase all the letter
-				let word = text.replace(/\W/g, '').toLowerCase();
+				let word = text.replace(this.regex, '').toLowerCase();
 
 				//reverse the word
 				let reverse_word = word.split('').reverse().join('');
