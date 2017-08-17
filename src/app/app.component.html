@@ -6,23 +6,23 @@
             </div>  
             <div class="content">
                 <div class="ui action input">
-                    <input type="text" placeholder="Type your word here..." [(ngModel)]="text">
-                    <button class="ui primary button" (click)="check_palindrome(text)">
+                    <input id="input_text" type="text" placeholder="Type your word here..." [(ngModel)]="text">
+                    <button id="check_btn" class="ui primary button" (click)="check_palindrome(text)">
                         Check
                     </button>
                 </div>
                 <div id="ok_list" class="ui list">
                     <div class="item ok_word" *ngFor="let item of ok_list">
                         <i class="checkmark icon"></i>
-                        <div class="content item">
+                        <div class="content item_ok">
                             {{item}}
                         </div>
                     </div>
                 </div>
-                <div id="fail_list" class="ui list" *ngFor="let item of fail_list">
-                    <div class="item fail_word">
+                <div id="fail_list" class="ui list">
+                    <div class="item fail_word" *ngFor="let item of fail_list">
                         <i class="remove icon"></i>
-                        <div class="content item">
+                        <div class="content item_fail">
                             {{item}}
                         </div>
                     </div>

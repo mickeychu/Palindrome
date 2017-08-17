@@ -52,7 +52,7 @@ export class AppComponent {
 			throw new Error('Invalid text!');
 		}
 		catch (error) {
-			console.log(error)
+			console.log(error);
 		}
 	}
 }

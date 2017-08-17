@@ -7,7 +7,7 @@ describe('AppComponent', () => {
 
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
-
+  let compiled: any;
   const TEXT_1 = 'A man, a plan, a canal, Panama!';
   const TEXT_2 = 'Amor, Roma';
   const TEXT_3 = 'race car';
@@ -29,6 +29,7 @@ describe('AppComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AppComponent);
+    compiled = fixture.debugElement.nativeElement;
     component = fixture.componentInstance;
     component.ok_list = [];
     component.fail_list = [];
@@ -37,6 +38,22 @@ describe('AppComponent', () => {
 
   it('should create the app', async(() => {
     expect(component).toBeTruthy();
+  }));
+
+  it('should render the input', async(() => {
+    expect(compiled.querySelector('#input_text')).toBeTruthy();
+  }));
+
+  it('should render the button', async(() => {
+    expect(compiled.querySelector('#check_btn')).toBeTruthy();
+  }));
+
+  it('should call the check_palindrome function when user click the button', async(() => {
+    let spy = spyOn(component, 'check_palindrome');
+
+    fixture.nativeElement.querySelector('#check_btn').click();
+
+    expect(spy).toHaveBeenCalled();
   }));
 
   it('should check the palindrome correctly', () => {
@@ -67,16 +84,8 @@ describe('AppComponent', () => {
     expect(component.fail_list[0]).toBe(inverted);
   });
 
-  /*it(`should have as title 'app'`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app');
-  }));
-
-  it('should render title in a h1 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
-  }));*/
+  it('should catch an error when user check with empty input', () => {
+    expect(() => {component.check_palindrome(null)}).not.toThrowError();
+    expect(() => {component.check_palindrome('')}).not.toThrowError();
+  });
 });
