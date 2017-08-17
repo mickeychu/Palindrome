@@ -24,4 +24,8 @@ This feature is not available yet.
 
 ## Usage
 
-User type the word and press **Enter** or click the **Check** button on the screen.
+User type the word to the *input* then press **Enter** or click the **Check** button on the screen. The result will show under the input as a list.
+
+The *green* list are Palindromes.
+
+The *red* list are not Palindrome.
