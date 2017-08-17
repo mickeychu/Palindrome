@@ -24,4 +24,4 @@ This feature is not available yet.
 
 ## Usage
 
-User type the word and click Enter or click the **check** button on the screen.
+User type the word and press **Enter** or click the **check** button on the screen.
