@@ -1,0 +1,30 @@
+.container{
+	padding: 2em;
+	margin: 0;
+}
+
+.header{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.ui.segment.form{
+	padding: 2em;
+}
+
+.content{
+	margin-top: 5em;
+}
+
+#ok_list{
+	margin-top: 3em;
+}
+
+.ok_word{
+	color: green;
+}
+
+.fail_word{
+	color: red;
+}
