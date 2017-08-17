@@ -2,7 +2,7 @@
 
 This is a application that check if a word is a palindrome.
 
-##Setup the application
+## Setup the application
 
 run `npm install`
 
