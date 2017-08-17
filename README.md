@@ -24,7 +24,7 @@ This feature is not available yet.
 
 ## Usage
 
-User type the word to the *input* then press **Enter** or click the **Check** button on the screen. The result will show under the input as a list.
+User type the word to the *input* then press **Enter** or click the **Check** button on the screen. The result will be shown under the input as 2 lists.
 
 The *green* list are Palindromes.
 
