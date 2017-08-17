@@ -6,7 +6,7 @@
             </div>  
             <div class="content">
                 <div class="ui action input">
-                    <input id="input_text" type="text" placeholder="Type your word here..." [(ngModel)]="text">
+                    <input (keyup.enter)="check_palindrome(text)" id="input_text" type="text" placeholder="Type your word here..." [(ngModel)]="text">
                     <button id="check_btn" class="ui primary button" (click)="check_palindrome(text)">
                         Check
                     </button>

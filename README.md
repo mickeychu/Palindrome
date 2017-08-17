@@ -21,3 +21,7 @@ Run `npm run test` to execute the unit tests. All the unit test passed.
 ## Running end-to-end tests
 
 This feature is not available yet.
+
+## Usage
+
+User type the word and click Enter or click the **check** button on the screen.
