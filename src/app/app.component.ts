@@ -13,7 +13,7 @@ export class AppComponent {
 
 	check_palindrome(text: string) {
 
-		try{
+		try{ 
 			//if user enter some text and it's not an empty string then do the checking
 			if(text && text !== '') {
 
