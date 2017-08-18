@@ -76,7 +76,7 @@ describe('AppComponent', () => {
 
   it('should push the incorrect word into the fail_list invertedly', () => {
 
-    let inverted = TEXT_6.replace(/\W/g, '').toLowerCase().split('').reverse().join(''); 
+    let inverted = TEXT_6.replace(/[\W_]/g, '').toLowerCase().split('').reverse().join(''); 
 
     component.check_palindrome(TEXT_6);
 
